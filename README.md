@@ -21,12 +21,14 @@ In the following tutorial I will show you how to set up the environment to work/
 ### 2. Using correct paths.
 I was using a Windows mashine, when you are using Linux or Mac the paths will be different. 
  
-
 In case: 
 Python installation path: C:\Python27.XX
 After extracting the OpenCV archive you will find a file named "cv2.pyd". Copy this file into the following paths.
-- C:\opencv3.1\build\python\2.7\x86
-- C:\Python27\Lib\site-packages
+* C:\opencv3.1\build\python\2.7\x86
+* C:\Python27\Lib\site-packages
+
+Copy the file "haarcascade_frontalface_default.xml" into 
+* C:\opencv3.1\build\etc\haarcascades 
 
 ### 3. Start the Python IDLE/ Bash.
 If you can import OpenCV and Numpy without any error message your integration was successful. If not go back two steps. 
