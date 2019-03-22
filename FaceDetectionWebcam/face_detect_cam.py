@@ -8,17 +8,17 @@ import cv2
 cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
-#Webcam initialisation
+#Initialize the webcam.
 video_capture = cv2.VideoCapture(0)
 
 while True:
-    # Get the next frame of the cam.
+    #Get the next frame of the cam.
     ret, frame = video_capture.read()
     
-    #Convert the frame to an gray picture for better processing
+    #Convert the frame to an gray picture for better processing.
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    #Facetedection initialisation
+    #Facetedection initialisation.
     faces = faceCascade.detectMultiScale(
         gray,
         scaleFactor=1.1,
@@ -28,7 +28,7 @@ while True:
     ) 
     
     
-    #Draw around every found face a rectangle 
+    #Draw a rectangle around every found face.  
     for (x, y, w, h) in faces:
        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
        #Name above the face
@@ -46,7 +46,7 @@ while True:
         padding=(32, 32), 
         scale=1.05
     )
-    #Draw around every found body a rectangle 
+    #Draw a rectangle around every found body.  
     for x, y, w, h in foundLocationsOfBody:
     # Draw rectangle around fond object
         if len (foundLocationsOfBody) > 0:
