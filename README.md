@@ -5,7 +5,7 @@
 This OpenCV application is using basic methods to detect human faces and bodys via webcam.
 
 ### Requirements
-* OpenCV 3.1 (http://opencv.org/downloads.html)
+* OpenCV 3.1 (https://opencv.org/releases.html)
 * Python 2.7.XX (https://www.python.org/downloads/)
 * Numpy 1.8.0 (http://sourceforge.net/projects/numpy/files/NumPy/)
 
